@@ -35,6 +35,7 @@ background-size: contain;
 	background-repeat: no-repeat;
 	width: 200px; 
 	height: 200px;
+	background-position: center;
 }
 #members .name{
 	font-size: 14pt;
