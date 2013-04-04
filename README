@@ -1,0 +1,11 @@
+This is a HTML 5 app for hosting my friends CVs.
+---
+
+TODO List:
+ - Add templating ( underscore maybe) 
+ - Change styles
+ - Clear old data
+ 
+
+Special Thanks to : 
+ - https://github.com/jpedroribeiro/html5-curriculum-vitae-template jpedroribeiro from who i copied first layout for quick start
