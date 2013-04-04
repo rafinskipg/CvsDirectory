@@ -1,7 +1,28 @@
-$(document).ready(function(){
- 
-	animateGmailLogo();
+window.templates = Array();
+templates.push('social');
 
+
+window.loadTemplates = function( callback){
+	//Load all the templates
+	var deferreds = [];
+
+	$.each(templates, function(index, template) {
+		
+		deferreds.push($.get('../../templates/'+template+'.html', function(data) {
+			window[template] = _.template(data);
+		}, 'html'));
+		
+	});
+
+	$.when.apply(null, deferreds).done(callback);
+
+}
+
+//Load the templates and trigger init at the end.
+$(document).ready(function(){
+	loadTemplates( function(){
+		init();
+	});
 });
 
 window.animateGmailLogo = function(){
@@ -18,14 +39,28 @@ window.animateGmailLogo = function(){
 	);
 	
 	
-	
 	$('.gmailLogo').addClass('visible animated lightSpeedIn').one('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(){
 						
-						$(this).removeClass('lightSpeedIn');		
-						
-					});
-	window.setTimeout(function() {
+		$(this).removeClass('lightSpeedIn');		
 		
-	}, 1000);
+	});
+}
 
+window.init = function(){
+	animateGmailLogo();
+	
+	socialOptions = {
+		twitter : 'www.twitter.com',
+		facebook : 'www.facebook.com',
+		gmail: 'gmail.com',
+		linkedin: 'linkedin.com',
+		github: 'github.com'
+	}
+	//Add the social data to the template
+	$('.socialBar').append(social(socialOptions));
+	$('.socialBar').addClass('animated');
+	
+	$('.arrow').bind('click', function(){
+		$('.socialBar').toggleClass('moveInRight100');
+	});
 }
