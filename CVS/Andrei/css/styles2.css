@@ -1,21 +1,30 @@
 /*   RESET   */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure,  footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;} body {line-height:1;} article,aside,details,figcaption,figure, footer,header,hgroup,menu,nav,section {display:block;} nav ul, nav ol {list-style:none;} blockquote, q {quotes:none;} blockquote:before, blockquote:after, q:before, q:after {content:''; content:none;} a {margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent;} ins {background-color:#ff9; color:#000; text-decoration:none;} mark {background-color:#ff9; color:#000; font-style:italic; font-weight:bold;} del {text-decoration: line-through;} abbr[title], dfn[title] {border-bottom:1px dotted; cursor:help;} table {border-collapse:collapse; border-spacing:0;} hr {display:block; height:1px; border:0; margin:1em 0; padding:0;} input, select {vertical-align:middle;}
-
-
+@font-face {
+  font-family: 'helveticaregular';
+  src: url('../../../fonts/helvecon-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 /*   MAIN STYLES   */
-html {background: white; color: #736766; font-family: 'PT Sans',sans-serif; height: 100%;}
+html {background: white; color: #736766; font-family: "helveticaregular", Helvetica, sans-serif; height: 100%;}
 body {height: 100%; margin: 0 auto; max-width: 978px; padding: 10px; overflow-x: hidden;}
 a, #skills dl dd {-webkit-transition: all 0.15s ; -moz-transition: all 0.15s ; -ms-transition: all 0.15s ; -o-transition: all 0.15s ; transition: all 0.15s ;}
 
 
 /*   HEADER   */
 header.vcard {margin-bottom: 10px; overflow: hidden;}
-img{float: left;
-padding-right: 20px;
+header img{float: left;
+box-shadow:4px 6px 12px rgba(136, 136, 136, 0.5);
+border-radius: 115px;
+box-shadow: 2px grey;
+margin-bottom: 10px;
+margin-right: 10px;
+height:237px;
 }
-.fn {font-size: 5em; font-weight: bold; padding: 5px 0 5px 10px;
+.fn {font-size: 4.5em; font-weight: bold; padding: 5px 0 5px 10px;
 color: grey;
-border-right: 1px dotted grey;
+
 width: 415px;
 float: left;
 height: 226px;}
@@ -24,10 +33,11 @@ height: 226px;}
 width: 305px;
 height: 222px;}
 .contact li {float:left; font-size: 1.2em;
-font-family: 'PT Sans',sans-serif;
+
 font-weight: bold;
 color: grey;
 height: 2em;
+margin-top: 10px; width: 100%;
 padding-left: 10pt;text-align: center;}
 .contact li:last-child {border: none}
 .contact a {color: #000;}
