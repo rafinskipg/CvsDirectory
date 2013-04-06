@@ -1,6 +1,26 @@
-<div class="arrow">Here</div>
+<div class="socialBar">
+<div class="arrow">Contacto</div>
 <div class="buttons">
-	<% if(facebook.length != 0){ %>
-	<div class="facebook"></div>
+	<% if(typeof(facebook) != 'undefined'){ %>
+	<div class="facebook icon"></div>
 	<% } %>
+	<% if(typeof(linkedin) != 'undefined'){ %>
+	<div class="linkedin icon"></div>
+	<% } %>
+	<% if(typeof(github) != 'undefined'){ %>
+	<div class="github icon"></div>
+	<% } %>
+	<% if(typeof(gmail) != 'undefined'){ %>
+	<div class="gmail icon"></div>
+	<% } %>
+	<% if(typeof(twitter) != 'undefined'){ %>
+	<div class="twitter icon"></div>
+	<% } %>
+	<% if(typeof(drupal) != 'undefined'){ %>
+	<div class="drupal icon"></div>
+	<% } %>
+	<% if(typeof(youtube) != 'undefined'){ %>
+	<div class="youtube icon"></div>
+	<% } %>
+</div>
 </div>

@@ -3222,7 +3222,7 @@
 	
 	100% {
 		opacity: 1;
-		-webkit-transform: translateX(-100px);
+		-webkit-transform: translateX(-50px);
 	}
 }
 
@@ -3234,7 +3234,7 @@
 	
 	100% {
 		opacity: 1;
-		-moz-transform: translateX(-100px);
+		-moz-transform: translateX(-50px);
 	}
 }
 
@@ -3246,7 +3246,7 @@
 	
 	100% {
 		opacity: 1;
-		-o-transform: translateX(-100px);
+		-o-transform: translateX(-50px);
 	}
 }
 
@@ -3258,7 +3258,7 @@
 	
 	100% {
 		opacity: 1;
-		transform: translateX(-100px);
+		transform: translateX(-50px);
 	}
 }
 

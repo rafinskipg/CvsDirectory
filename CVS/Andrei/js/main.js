@@ -46,21 +46,37 @@ window.animateGmailLogo = function(){
 	});
 }
 
-window.init = function(){
-	animateGmailLogo();
-	
-	socialOptions = {
-		twitter : 'www.twitter.com',
-		facebook : 'www.facebook.com',
-		gmail: 'gmail.com',
-		linkedin: 'linkedin.com',
-		github: 'github.com'
-	}
+window.createSocialData = function(socialOptions, selectorString){
 	//Add the social data to the template
-	$('.socialBar').append(social(socialOptions));
+	$(selectorString).append(social(socialOptions));
 	$('.socialBar').addClass('animated');
 	
 	$('.arrow').bind('click', function(){
 		$('.socialBar').toggleClass('moveInRight100');
 	});
+	
+	$(window).on('scroll', function(e){
+		//$('.socialBar').css('top', scrollY+30);
+		$('.socialBar').animate({top:scrollY+30},{duration:500,queue:false});  
+	});
+}
+
+
+window.init = function(){
+	//animateGmailLogo();
+	
+	
+	socialOptions = {
+		twitter : 'www.twitter.com',
+		facebook : 'www.facebook.com',
+		youtube: 'gmail.com',
+		linkedin: 'linkedin.com',
+		github: 'github.com'
+	}
+	
+	//Create social bar
+	createSocialData(socialOptions, 'body');
+	
+	
+	
 }
