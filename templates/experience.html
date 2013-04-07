@@ -1,0 +1,13 @@
+<h1 class="title">Work Experience</h1>
+	<% _.each(experience, function(element, index){%>
+		<article>
+			<h1>
+				<a title="<%= element.title %>" href="<%= element.link %>"><%= element.title %></a>
+				<span><%= element.country %></span>
+			</h1>
+			<h2><%= element.functions%></h2>
+			<span class="start"><%= element.start%></span>
+			<span class="end"><%= element.end%></span>
+			<p><%= element.description%></p>
+		</article>
+	<% });%>

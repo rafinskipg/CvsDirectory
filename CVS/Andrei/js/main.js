@@ -1,6 +1,7 @@
 window.templates = Array();
 templates.push('social');
 templates.push('skills');
+templates.push('experience');
 
 
 window.loadTemplates = function( callback){
@@ -67,6 +68,11 @@ window.createSkillsData = function( skillsOptions, selectorString){
 	$(selectorString).append(skills(skillsOptions));
 }
 
+window.createExperienceData = function( experienceOptions, selectorString){
+	//Add the work experience
+	$(selectorString).append(experience(experienceOptions));
+}
+
 window.init = function(){
 	//animateGmailLogo();
 	
@@ -100,4 +106,22 @@ window.init = function(){
 	//Create Skills block
 	createSkillsData(skillsOptions, '#skills');
 	
+	//Experience
+	experienceOptions = {
+		'experience': [
+			{
+				title 		: 	'Nervia Consultores',
+				link		:	'www.nerviaconsultores.com',
+				country		:	'Spain' ,
+				functions	:	'Web Designer, IT, Programmer',
+				start		:	'January 2011',
+				end			:	'Present',
+				description	:	'Programador de aplicaciones en UCM con J2EE y ExtJS. <br /> Actualmente colaborando en la p&aacute;gina web del Instituto Espa&ntilde;a de Comercio Exterior en Madrid'
+			}		
+		]	
+	}
+	
+	//Create Experience block
+	createExperienceData(experienceOptions, '#experience');
+
 }
