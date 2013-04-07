@@ -1,4 +1,6 @@
+
 window.templates = Array();
+
 templates.push('social');
 templates.push('skills');
 templates.push('experience');
