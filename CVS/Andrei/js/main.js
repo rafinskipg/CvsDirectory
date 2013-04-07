@@ -76,7 +76,7 @@ window.createSkillsData = function( skillsOptions, selectorString){
 window.createExperienceData = function( experienceOptions, selectorString){
 	//Add the work experience
 	$(selectorString).append(experience(experienceOptions));
-
+}
 window.createVCardData = function( vCardOptions, selectorString){
 	//Add the vcard data to the template
 	$(selectorString).append(vcard(vCardOptions));
