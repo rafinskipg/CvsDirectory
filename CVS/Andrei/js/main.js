@@ -1,5 +1,6 @@
 window.templates = Array();
 templates.push('social');
+templates.push('skills');
 
 
 window.loadTemplates = function( callback){
@@ -61,6 +62,10 @@ window.createSocialData = function(socialOptions, selectorString){
 	});
 }
 
+window.createSkillsData = function( skillsOptions, selectorString){
+	//Add the social data to the template
+	$(selectorString).append(skills(skillsOptions));
+}
 
 window.init = function(){
 	//animateGmailLogo();
@@ -78,5 +83,21 @@ window.init = function(){
 	createSocialData(socialOptions, 'body');
 	
 	
+	//Skills
+	skillsOptions = {
+		'skills':[
+			{
+				'title' : 'Design',
+				'data' : [
+					'webDesign',
+					'UserInterface design',
+					'alalalal'
+				]
+			}
+		]
+	}
+	
+	//Create Skills block
+	createSkillsData(skillsOptions, '#skills');
 	
 }

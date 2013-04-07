@@ -1,0 +1,13 @@
+<h1 class="title">Skills</h1>
+<dl>
+    <% _.each(skills, function(element, index){  %>
+		<dt><%= element.title %></dt>
+		<% _.each(element.data, function(subskill){ %>
+			<dd><%= subskill %></dd>
+		<% }); %>
+		
+	<% });%>
+	
+	
+</dl>
+	
