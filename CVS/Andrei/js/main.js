@@ -2,6 +2,8 @@ window.templates = Array();
 templates.push('social');
 templates.push('skills');
 templates.push('experience');
+templates.push('vcard');
+templates.push('summary');
 
 
 window.loadTemplates = function( callback){
@@ -68,14 +70,46 @@ window.createSkillsData = function( skillsOptions, selectorString){
 	$(selectorString).append(skills(skillsOptions));
 }
 
+
 window.createExperienceData = function( experienceOptions, selectorString){
 	//Add the work experience
 	$(selectorString).append(experience(experienceOptions));
+
+window.createVCardData = function( vCardOptions, selectorString){
+	//Add the vcard data to the template
+	$(selectorString).append(vcard(vCardOptions));
+}
+
+window.createSummaryData = function( summaryOptions, selectorString){
+	//Add the summary data to the template
+	$(selectorString).append(summary(summaryOptions));
+
 }
 
 window.init = function(){
 	//animateGmailLogo();
+	//Create VCard Options
+	vCardOptions = {
+		photo : 'img/perfil.jpg',
+		name : 'Andrei Preda',
+		email : 'predaandrei3@gmail.com',
+		phone : '666 33 55 66',
+		website : 'www.andrei.com',
+		locality : 'Madrid',
+		country : 'Spain',
+		aditional : '@andrei',
+		job_position : 'back-end Developer'
 	
+	}
+	createVCardData(vCardOptions, '.vcard');
+	
+	//Create Summary 
+	summaryOptions = {
+		summary : '<p>Web Designer and Front-end Developer since 2003. Worked for agencies and as a freelancer for companies in Brazil, Europe and Asia.</p>' +
+					 '<p>Focus on designing user interfaces for websites and developing semantic, responsive and reusable code aiming for best performance on browsers and devices.</p>'+
+					 '<p>A programmer by education (graduated in Computer Science) and (interface) designer by heart. Also a blogger at jpedroribeiro.com, where several web related topics are written, from book reviews to how-to guides on development and design.</p>'
+	}
+	createSummaryData(summaryOptions, '#summary');
 	
 	socialOptions = {
 		twitter : 'www.twitter.com',
@@ -91,10 +125,10 @@ window.init = function(){
 	
 	//Skills
 	skillsOptions = {
-		'skills':[
+		skills:[
 			{
-				'title' : 'Design',
-				'data' : [
+				title : 'Design',
+				data : [
 					'webDesign',
 					'UserInterface design',
 					'alalalal'
