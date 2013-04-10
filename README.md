@@ -21,6 +21,7 @@ HTML5 + JQuery + Underscore + PHP Backend + MySQL Databbase
  - Add combos for professions and what we think it's important so we can translate them into other languages
  - Add more templates like "Others" and "Languages" (Also add photos and videos for designers)
  - Export CV to PDF and other formats (JasperReports maybe)
+ - Add Reveal JS for creating Slide - Presentations http://lab.hakim.se/reveal-js/#/
  
 
 Special Thanks to : 
