@@ -22,6 +22,7 @@ HTML5 + JQuery + Underscore + PHP Backend + MySQL Databbase
  - Add more templates like "Others" and "Languages" (Also add photos and videos for designers)
  - Export CV to PDF and other formats (JasperReports maybe)
  - Add Reveal JS for creating Slide - Presentations http://lab.hakim.se/reveal-js/#/
+ - OMG we MUST reuse something of that http://spyrestudios.com/30-new-open-source-plugins-scripts/
  
 
 Special Thanks to : 
