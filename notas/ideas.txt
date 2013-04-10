@@ -1,0 +1,23 @@
+/**************************************************
+* Author: Andrei
+* Date:	  09/04/2013
+* Description: Ideas que me han surgido
+****************************************************/
+
+1.	Que cada usuario pueda tener varios CVs en función de si necesita uno u otro según el trabajo.
+	Cuando se crea un nuevo CV podemos darle la opción de cargar los datos de un CV anterior y 
+	modificar sobre ese
+
+2.	Hacer que el formulario de creación del CV sea un formulario con algunos campos  como por ejemplo
+	el de los estudios, con un combo. Esto lo había pensado porque molaría tener en la base de datos
+	una tabla con los distintos valor en diferentes idiomas y poder sacar por ejemplo el CV en inglés.
+
+3.	Añadir más campos como el de los idiomas que conoce uno y un apartado de otros datos para dar más 
+	detalles de otras cosas que creamos conveniente ( carné de conducir etc.). La opción de añadir 
+	fotos y videos es una opción válida para los diseñadores e ingenieros.
+	
+4.	Exportación del CV a varios formatos. Estos días me ha tocado rayarme un poco la cabeza con JasperReports
+	este permite exportar a PDF, Excel, DOC, RTF... podría molar. Veo que hay gente que ha conseguido
+	ejecutarlo desde PHP, igual con JSON o algo también se puede. Dejo un par de links de lo que he encontrado:
+	http://www.adictosaltrabajo.com/tutoriales/tutoriales.php?pagina=jasperreportPHP
+	http://redev.blogspot.com.es/2011/01/jasper-reports-server-php.html	

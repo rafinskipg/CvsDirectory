@@ -6,6 +6,8 @@ templates.push('skills');
 templates.push('experience');
 templates.push('vcard');
 templates.push('summary');
+templates.push('education');
+templates.push('hobbies');
 
 
 window.loadTemplates = function( callback){
@@ -85,7 +87,16 @@ window.createVCardData = function( vCardOptions, selectorString){
 window.createSummaryData = function( summaryOptions, selectorString){
 	//Add the summary data to the template
 	$(selectorString).append(summary(summaryOptions));
+}
 
+window.createEducationData = function(educationOptions,selectorString){
+	//Add the education data to the template
+	$(selectorString).append(education(educationOptions));
+}
+
+window.createHobbiesData = function(hobbiesOptions,selectorString){
+	//Add hobbies data to the template
+	$(selectorString).append(hobbies(hobbiesOptions));
 }
 
 window.init = function(){
@@ -129,12 +140,28 @@ window.init = function(){
 	skillsOptions = {
 		skills:[
 			{
-				title : 'Design',
-				data : [
-					'webDesign',
-					'UserInterface design',
-					'alalalal'
-				]
+				title 	: 	'Dise&ntilde;o',
+				data 	: 	[
+								'Dise&ntilde;o de p&aacute;ginas web',
+							]
+			},{
+				title	:	'Programaci&oacute;n',
+				data	:	[
+								'PHP',
+								'JavaScript',
+								'ExtJS',
+								'Java',
+								'CSS',
+								'JSP',
+								'HTML'
+							]
+			},{
+				title	:	'Bases de datos',
+				data	:	[
+								'MySQL',
+								'SQL Server',
+								'Oracle'
+							]
 			}
 		]
 	}
@@ -146,18 +173,94 @@ window.init = function(){
 	experienceOptions = {
 		'experience': [
 			{
+				title		:	'Instituto Espa&ntilde;ol de Comercio Exterior',
+				link		:	'www.icex.es',
+				country		:	'Madrid - Espa&ntilde;a',
+				functions	:	'Programador',
+				start		:	'Noviembre 2012',
+				end			:	'Actualmente',
+				description	:	'Programando la nueva p&aacute;gina web del Instituto Espa&ntilde;ol de Comercio Exterior. Desarrollo realizado en JSP con la librer&iacute;a JSTL '+
+								'y UCM. Programaci&oacute;n con J2EE'
+			},{
 				title 		: 	'Nervia Consultores',
-				link		:	'www.nerviaconsultores.com',
-				country		:	'Spain' ,
-				functions	:	'Web Designer, IT, Programmer',
-				start		:	'January 2011',
-				end			:	'Present',
-				description	:	'Programador de aplicaciones en UCM con J2EE y ExtJS. <br /> Actualmente colaborando en la p&aacute;gina web del Instituto Espa&ntilde;a de Comercio Exterior en Madrid'
-			}		
+				link		:	'www.gruponervia.com',
+				country		:	'Zaragoza - Espa&ntilde;a' ,
+				functions	:	'Programador, Sistemas',
+				start		:	'Enero 2011',
+				end			:	'Actualmente',
+				description	:	'Programador de aplicaciones en UCM con J2EE y ExtJS. <br /> Responsable de sistemas y del entorno virtualizado. <br />Participaci&oacute;n en varios '+
+								'proyectos en diferentes equipos llegando a ser m&aacute;ximo responsable de desarrollo y mantenimiento de la aplicaci&oacute;n'
+			},{
+				title		:	'INSINEC',
+				link		:	'www.insinec.es',
+				country		:	'Alca&ntilde;iz - Teruel',
+				functions	:	'Pr&aacute;cticas/Becario',
+				start		:	'Mayo 2010',
+				end			:	'Julio 2010',
+				description	:	'Programaci&oacute;n en php, javascript,uso de ajax, sql server, montaje y mantenimiento de equipos inform&aacute;ticos'
+			},{
+				title		:	'AERONA SOFTWARE',
+				link		:	'www.aerona.com',
+				country		:	'Derry - Irlanda del Norte',
+				functions	:	'Pr&aacute;cticas/Becario',
+				start		:	'Abril 2010',
+				end			:	'Mayo 2010',
+				description	:	'Programador en php y mantenimiento de p&aacute;ginas web'
+			}
 		]	
 	}
 	
 	//Create Experience block
 	createExperienceData(experienceOptions, '#experience');
-
+	
+	//Education
+	educationOptions = {
+		'education'	:	[
+							{
+								grade		:	'Grado Superior',
+								specialism	:	'Desarrollo de aplicaciones inform&aacute;ticas',
+								colleague	:	'I.E.S. Bajo Arag&oacute;n',
+								city		:	'Alca&ntilde;iz',
+								country		:	'Espa&ntilde;a',
+								start		:	'2008',
+								end			:	'2010'
+							},{
+								grade		:	'Bachillerato',
+								specialism	:	'Tecnolog&iacute;a'	,
+								colleague	:	'I.E.S. Bajo Arag&oacute;n',
+								city		:	'Alca&ntilde;iz',
+								country		:	'Espa&ntilde;a',
+								start		:	'2005',
+								end			:	'2008'
+							},{
+								grade		:	'E.S.O.',
+								colleague	:	'I.E.S. Bajo Arag&oacute;n',
+								city		:	'Alca&ntilde;iz',
+								country		:	'Espa&ntilde;a',
+								start		:	'2002',
+								end			:	'2005'
+							}
+						]
+	}
+	
+	//Create Education block
+	createEducationData(educationOptions, '#education');
+	
+	//Hobbies
+	hobbiesOptions = {
+		'hobbies'	:	[
+							{
+								hobby	:	'Correr por el parque'
+							},{
+								hobby	:	'Ver series y pel&iacute;culas'
+							},{
+								hobby	:	'Jugar a videojuegos'
+							},{
+								hobby	:	'Ir en bicicleta por la ciudad'
+							}
+						]
+	}
+	
+	//Create Hobbies block
+	createHobbiesData(hobbiesOptions, '#hobbies');
 }
