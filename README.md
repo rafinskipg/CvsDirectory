@@ -1,4 +1,5 @@
 # CVSDirectory
+## UNDER INITIAL DEVELOPMENT 
 
 ## Technical details
 HTML5 + JQuery + Underscore + PHP Backend + MySQL Databbase
@@ -23,6 +24,9 @@ HTML5 + JQuery + Underscore + PHP Backend + MySQL Databbase
  - Export CV to PDF and other formats (JasperReports maybe)
  - Add Reveal JS for creating Slide - Presentations http://lab.hakim.se/reveal-js/#/
  - OMG we MUST reuse something of that http://spyrestudios.com/30-new-open-source-plugins-scripts/
+ - Add Douglas Crockford JSON js http://en.wikipedia.org/wiki/Douglas_Crockford
+ - Add Continous Integration with Travis CI https://travis-ci.org/
+ - Learn something from https://masterbranch.com/
  
 
 Special Thanks to : 
