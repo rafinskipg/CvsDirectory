@@ -27,6 +27,7 @@ HTML5 + JQuery + Underscore + PHP Backend + MySQL Databbase
  - Add Douglas Crockford JSON js http://en.wikipedia.org/wiki/Douglas_Crockford
  - Add Continous Integration with Travis CI https://travis-ci.org/
  - Learn something from https://masterbranch.com/
+ - Reuse Hakim experiments http://lab.hakim.se/
  
 
 Special Thanks to : 
