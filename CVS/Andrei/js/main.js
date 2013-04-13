@@ -8,6 +8,7 @@ templates.push('vcard');
 templates.push('summary');
 templates.push('education');
 templates.push('hobbies');
+templates.push('languages');
 
 
 window.loadTemplates = function( callback){
@@ -97,6 +98,11 @@ window.createEducationData = function(educationOptions,selectorString){
 window.createHobbiesData = function(hobbiesOptions,selectorString){
 	//Add hobbies data to the template
 	$(selectorString).append(hobbies(hobbiesOptions));
+}
+
+window.createLanguagesData = function(languagesOptions,selectorString){
+	//Add languages data to the template
+	$(selectorString).append(languages(languagesOptions));
 }
 
 window.init = function(){
@@ -263,4 +269,29 @@ window.init = function(){
 	
 	//Create Hobbies block
 	createHobbiesData(hobbiesOptions, '#hobbies');
+	
+	//Languages
+	languagesOptions = {
+		'languages'	:	[
+							{
+								title	:	'Castellano',
+								speak	:	'Muy bien',
+								write	:	'Muy bien',
+								read	:	'Muy bien'
+							},{
+								title	:	'Rumano',
+								speak	:	'Muy bien',
+								write	:	'Muy bien',
+								read	:	'Muy bien'
+							},{
+								title	:	'Ingl&eacute;s',
+								speak	:	'Bien',
+								write	:	'Bien',
+								read	:	'Bien'
+							}
+						]
+	}
+	
+	//Create Languages block
+	createLanguagesData(languagesOptions, '#languages');
 }
