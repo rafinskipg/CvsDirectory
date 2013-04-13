@@ -1,0 +1,21 @@
+<h1>Languages</h1>
+	<ul class="inlineList">
+		<li>
+			<ul>
+				<li class="title"></li>
+				<li><b>Hablado</b></li>
+				<li><b>Escrito</b></li>
+				<li><b>Le&iacute;do</b></li>
+			</ul>
+		</li>
+	<% _.each(languages, function(element, index){ %>
+		<li>
+			<ul>
+				<li class="title"><b><%= element.title%></b></li>
+				<li><%= element.speak%></li>
+				<li><%= element.write%></li>
+				<li><%= element.read%></li>
+			</ul>
+		</li>
+	<% }); %>
+	</ul>

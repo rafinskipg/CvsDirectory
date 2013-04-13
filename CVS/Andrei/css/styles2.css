@@ -89,7 +89,15 @@ top: 85PX;}
 #hobbies ul li a {color: #555}
 #hobbies ul li a:hover {background-color: #555; color: #eee; text-decoration: none}
 
-
+#languages ul li{list-style:none;}
+#languages .inlineList li li{
+    display: inline-block;
+    width:100px;
+	list-style-type: none;
+	padding-right: 20px;
+	text-align:	center;
+}
+#languages .inlineList .title{text-align:left;}
 
 /* MEDIA QUERIES */
 @media screen and (max-width:768px) {
