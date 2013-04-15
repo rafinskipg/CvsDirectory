@@ -1,34 +1,73 @@
 /*   RESET   */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure,  footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;} body {line-height:1;} article,aside,details,figcaption,figure, footer,header,hgroup,menu,nav,section {display:block;} nav ul, nav ol {list-style:none;} blockquote, q {quotes:none;} blockquote:before, blockquote:after, q:before, q:after {content:''; content:none;} a {margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent;} ins {background-color:#ff9; color:#000; text-decoration:none;} mark {background-color:#ff9; color:#000; font-style:italic; font-weight:bold;} del {text-decoration: line-through;} abbr[title], dfn[title] {border-bottom:1px dotted; cursor:help;} table {border-collapse:collapse; border-spacing:0;} hr {display:block; height:1px; border:0; margin:1em 0; padding:0;} input, select {vertical-align:middle;}
-
-
+@font-face {
+  font-family: 'helveticaregular';
+  src: url('../../../fonts/helvecon-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 /*   MAIN STYLES   */
-html {background: #F2F2E9; color: #736766; font-family: 'PT Sans',sans-serif; height: 100%;}
-body {height: 100%; margin: 0 auto; max-width: 978px; padding: 10px}
+html {background: white; color: #736766; font-family: "helveticaregular", Helvetica, sans-serif; height: 100%;}
+body {height: 100%; margin: 0 auto; max-width: 978px; padding: 10px; overflow-x: hidden;}
 a, #skills dl dd {-webkit-transition: all 0.15s ; -moz-transition: all 0.15s ; -ms-transition: all 0.15s ; -o-transition: all 0.15s ; transition: all 0.15s ;}
 
 
 /*   HEADER   */
 header.vcard {margin-bottom: 10px; overflow: hidden;}
-.fn {font-size: 2.7em; font-weight: bold; padding: 5px 0 5px 10px;}
-.role {background: #999; color: #FCFCFC; font-weight: normal; margin: 4px 0 13px; padding: 5px 5px 5px 10px; -webkit-border-radius: 5px; border-radius: 5px; -webkit-box-shadow:  0px 1px 1px 0px rgba(0, 0, 0, 0.35);  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);}
-.contact {list-style: none; margin-bottom: 15px; overflow: hidden;}
-.contact li {border-right: 1px solid #ccc; display: inline; float: left; font-size: 0.8em; padding: 2px 0; text-align: center; width: 19.5%; overflow: hidden}
+header img{float: left;
+box-shadow:4px 6px 12px rgba(136, 136, 136, 0.5);
+border-radius: 115px;
+box-shadow: 2px grey;
+margin-bottom: 10px;
+margin-right: 10px;
+height:237px;
+}
+.fn {font-size: 4.5em; font-weight: bold; padding: 5px 0 5px 10px;
+color: grey;
+
+width: 415px;
+float: left;
+height: 226px;}
+.role {clear:both; background: rgba(109, 109, 109, 0.78); color: #FCFCFC; font-weight: normal; margin: 4px 0 13px; padding: 5px 5px 5px 10px; -webkit-border-radius: 5px; border-radius: 5px; -webkit-box-shadow:  0px 1px 1px 0px rgba(0, 0, 0, 0.35);  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);}
+.contact {list-style: none; float: left;
+width: 305px;
+height: 222px;}
+.contact li {float:left; font-size: 1.2em;
+
+font-weight: bold;
+color: grey;
+height: 2em;
+margin-top: 10px; width: 100%;
+padding-left: 10pt;text-align: center;}
 .contact li:last-child {border: none}
 .contact a {color: #000;}
 .contact a:hover {background-color: #eee; text-decoration: none}
 
 
 /*   CONTENT   */
-section {font-size: 0.9em; margin: 30px 0; overflow: hidden; }
-section h1 {border-left: 2px solid #DDD; font-size: 1.25em; margin-bottom: 10px; padding-left: 5px; text-transform: uppercase;}
-section p {line-height: 1.5em; padding: 0 20px 5px;}
+section {font-size: 0.9em; margin: 30px 0; overflow: hidden; padding-left:11px; position: relative;}
+section h1 {border-left: 2px solid #DDD; font-size: 1.8em; margin-bottom: 10px; padding-left: 5px; text-transform: uppercase;/* Firefox */ color:grey;}
+section h1.title {
+/*-moz-transform: rotate(-90deg);
 
+-ms-transform: rotate(-90deg);
+
+-o-transform: rotate(-90deg);
+-webkit-transform: rotate(-90deg);
+position: absolute;
+left: -37px;
+top: 42px;*/
+
+}
+section p {line-height: 1.5em; padding: 0 20px 5px;}
+#skills h1{left: -23px}
 #skills dl {margin-left: 15px;}
 #skills dl dt {clear: left; display: inline; float: left; margin: 10px 5px 10px 0; padding: 2px; text-align: right; width: 150px;}
 #skills dl dd {background: #dfdfdf; display: inline; float: left; font-size: 0.8em; margin: 10px 4px; padding: 4px; -webkit-border-radius: 5px; border-radius: 5px; -webkit-box-shadow:  0px 1px 1px 0px rgba(0, 0, 0, 0.35);  box-shadow:  0px 1px 1px 0px rgba(0, 0, 0, 0.35); cursor: default}
 #skills dl dd:hover {background-color: #ccc; -webkit-box-shadow: inset 0px 2px 1px 1px rgba(0, 0, 0, 0.15); box-shadow: inset 0px 2px 1px 1px rgba(0, 0, 0, 0.15); }
 
+#experience h1.title{left: -70px;
+top: 85PX;}
 #experience article {margin: 15px 0 37px 95px; padding-left: 5px; position: relative; border: 1px solid #FCFCFC}
 #experience article:last-child {margin-bottom: 0}
 #experience article:hover {border: 1px dotted #ddd; background: #fefefe}
@@ -74,12 +113,77 @@ section p {line-height: 1.5em; padding: 0 20px 5px;}
 
 /* Modified stuff **/
 .gmailLogo {
-	width: 100px; 
-	height: 100px;
-	background-image:url('img/gmail_lrg.png');
+	width: 55px; 
+	height: 55px;
+	background-image:url('../img/gmail_lrg.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 	position: absolute;
-top: 0;
-right: 0;
+	top: 0;
+	right: 0;
+	display:none;
+}
+
+.visible{
+	display:block;
+}
+
+/*SOCIAL BAR */
+.socialBar{
+position: absolute;
+top: 100px;
+right: -50px;
+background-color: whitesmoke;
+border-radius: 5px;
+padding: 10px;
+border: 1px solid grey;
+}
+
+
+.socialBar .arrow{
+/* Firefox */
+-moz-transform: rotate(-90deg);
+
+/* IE */
+-ms-transform: rotate(-90deg);
+
+/* Opera */
+-o-transform: rotate(-90deg);
+-webkit-transform: rotate(-90deg);
+
+left: -44px;
+position: absolute;
+background: white;
+padding: 5px;
+border-radius: 5px;
+border: 1px solid grey;
+}
+
+.socialBar .icon{
+width: 37px;
+	height: 37px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.socialBar .linkedin{
+	background-image:url('../../../img/social/png/linkedin.png');
+}
+.socialBar .facebook{	
+	background-image:url('../../../img/social/png/facebook.png');
+}
+.socialBar .github{	
+	background-image:url('../../../img/social/png/github_alt.png');
+}
+.socialBar .gmail{	
+	background-image:url('../../../img/social/png/gmail.png');
+}
+.socialBar .twitter{	
+	background-image:url('../../../img/social/png/twitter.png');
+}
+.socialBar .drupal{	
+	background-image:url('../../../img/social/png/drupal.png');
+}
+.socialBar .youtube{	
+	background-image:url('../../../img/social/png/youtube.png');
 }

@@ -1,4 +1,5 @@
 <h1 >Education</h1>
+<div class="content">
 	<% _.each(education, function(element, index){ %>
 			<h2><%= element.grade%> 
 				<%if (!_.isEmpty(element.specialism)) {%>
@@ -9,3 +10,4 @@
 			<h2><%= element.colleague %></h2>
 			<p><%= element.city%> - <%= element.country%></p>
 	<% }); %>
+</div>
